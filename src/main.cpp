@@ -76,7 +76,7 @@ class $modify(PIBBaseGameLayer, GJBaseGameLayer) {
     }
 
     // Se llama una vez por paso de fisica: aqui descontamos ticks.
-    void processCommands(float dt) {
+   void processCommands(float dt, bool isHalfTick, bool isLastTick) {
         auto f = m_fields.self();
 
         for (auto it = f->queue.begin(); it != f->queue.end();) {
@@ -91,7 +91,7 @@ class $modify(PIBBaseGameLayer, GJBaseGameLayer) {
             }
         }
 
-        GJBaseGameLayer::processCommands(dt);
+   GJBaseGameLayer::processCommands(dt, isHalfTick, isLastTick);
     }
 };
 
