@@ -1,3 +1,4 @@
+
 name: Build Geode Mod
 
 on:
@@ -24,6 +25,7 @@ jobs:
         with:
           combine: true
           sdk: stable
+          bindings-ref: 7407717c307d1cd94461786210b330ab868f4260
 
   package:
     name: Package builds
